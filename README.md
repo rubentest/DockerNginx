@@ -3,7 +3,7 @@
 Image NGINX with logs in custom format.
 Also has env var to define fastcgi_pass
 
-fastcgi_pass ${fastcgi_pass}:9000;
+fastcgi_pass ${${PHP_HOST}}:9000;
 
 environment:
-      - fastcgi_pass="name phpcontainer"
+      - ${PHP_HOST}="name phpcontainer"
