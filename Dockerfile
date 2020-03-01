@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install -y curl iputils-ping telnet vim
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 COPY ./nginx.conf /etc/nginx/nginx.conf
 
+ENV DATA_DIR /web
+
 ADD start.sh /usr/local/bin/
 
 # Disable daemon mode
