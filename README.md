@@ -3,7 +3,7 @@
 Image NGINX with logs in custom format.
 Also has env var to define fastcgi_pass
 
-fastcgi_pass ${${PHP_HOST}}:9000;
+Change fastcgi_pass in file: 
+https://raw.githubusercontent.com/rubentest/DockerNginx/master/default.conf
 
-environment:
-      - ${PHP_HOST}="name phpcontainer"
+And mount as volume in docker or docker-compose.
